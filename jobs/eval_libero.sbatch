@@ -6,7 +6,7 @@
 #SBATCH --time=12:00:00
 #SBATCH --output=logs/%x-%j.log
 # LIBERO sim eval of a SmolVLA checkpoint (Hub id or local pretrained_model dir).
-# Usage: CKPT=lerobot/smolvla_libero TASK=libero_spatial [N_EPISODES=10] [SEED=1000] RUN_NAME=... \
+# Usage: CKPT=lerobot/smolvla_libero TASK=libero_spatial [N_EPISODES=10] [SEED=1000] [N_ACTION_STEPS=..] RUN_NAME=... \
 #          scripts/submit.sh jobs/eval_libero.sbatch
 # N_EPISODES is per task (each suite has 10 tasks). TASK may be a comma-separated list of suites.
 set -euo pipefail
@@ -30,7 +30,10 @@ print("wrote LIBERO config:", cfg)
 EOF
 fi
 nvidia-smi --query-gpu=name,driver_version --format=csv,noheader
-echo "CKPT=$CKPT TASK=$TASK N_EPISODES=${N_EPISODES:-10} SEED=${SEED:-1000}"
+echo "CKPT=$CKPT TASK=$TASK N_EPISODES=${N_EPISODES:-10} SEED=${SEED:-1000} N_ACTION_STEPS=${N_ACTION_STEPS:-<checkpoint default>}"
+# Optional: how many actions of each predicted chunk run before re-planning (checkpoint default if unset).
+EXTRA=()
+[ -n "${N_ACTION_STEPS:-}" ] && EXTRA+=(--policy.n_action_steps="$N_ACTION_STEPS")
 
 # LIBERO's cameras are image/image2; SmolVLA checkpoints name them camera1/camera2.
 lerobot-eval \
@@ -39,5 +42,5 @@ lerobot-eval \
   --eval.n_episodes=${N_EPISODES:-10} --eval.batch_size=1 \
   --eval.use_async_envs=false \
   --rename_map='{"observation.images.image": "observation.images.camera1", "observation.images.image2": "observation.images.camera2"}' \
-  --policy.device=cuda --seed=${SEED:-1000} \
+  --policy.device=cuda --seed=${SEED:-1000} "${EXTRA[@]}" \
   --output_dir=outputs/eval/${RUN_NAME:-eval}_${SLURM_JOB_ID}
