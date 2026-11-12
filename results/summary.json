@@ -1,0 +1,317 @@
+{
+  "paper_smolvla_0.45B": {
+    "Spatial": 90,
+    "Object": 96,
+    "Goal": 92,
+    "Long": 71,
+    "avg": 87.3
+  },
+  "runs": {
+    "expert_all_nas10_s2000": {
+      "model": "ft",
+      "n_action_steps": 10,
+      "seed": 2000,
+      "suites": {
+        "Spatial": 76.0,
+        "Object": 86.0,
+        "Goal": 83.0,
+        "Long": 56.0
+      },
+      "avg": 75.25,
+      "episodes": 400,
+      "ci95": [
+        70.8,
+        79.2
+      ]
+    },
+    "expert_all_nas50_s2000": {
+      "model": "ft",
+      "n_action_steps": 50,
+      "seed": 2000,
+      "suites": {
+        "Spatial": 64.0,
+        "Object": 64.0,
+        "Goal": 73.0,
+        "Long": 43.0
+      },
+      "avg": 61.0,
+      "episodes": 400,
+      "ci95": [
+        56.1,
+        65.7
+      ]
+    },
+    "ft_all_nas10": {
+      "model": "ft",
+      "n_action_steps": 10,
+      "seed": 1000,
+      "suites": {
+        "Spatial": 76.0,
+        "Object": 85.0,
+        "Goal": 88.0,
+        "Long": 56.0
+      },
+      "avg": 76.25,
+      "episodes": 400,
+      "ci95": [
+        71.8,
+        80.2
+      ]
+    },
+    "ft_all_nas25": {
+      "model": "ft",
+      "n_action_steps": 25,
+      "seed": 1000,
+      "suites": {
+        "Spatial": 76.0,
+        "Object": 86.0,
+        "Goal": 86.0,
+        "Long": 41.0
+      },
+      "avg": 72.25,
+      "episodes": 400,
+      "ci95": [
+        67.7,
+        76.4
+      ]
+    },
+    "ft_all_nas5": {
+      "model": "ft",
+      "n_action_steps": 5,
+      "seed": 1000,
+      "suites": {
+        "Spatial": 67.0,
+        "Object": 89.0,
+        "Goal": 84.0,
+        "Long": 54.0
+      },
+      "avg": 73.5,
+      "episodes": 400,
+      "ci95": [
+        69.0,
+        77.6
+      ]
+    },
+    "ft_all_nas50": {
+      "model": "ft",
+      "n_action_steps": 50,
+      "seed": 1000,
+      "suites": {
+        "Spatial": 68.0,
+        "Object": 66.0,
+        "Goal": 66.0,
+        "Long": 41.0
+      },
+      "avg": 60.25,
+      "episodes": 400,
+      "ci95": [
+        55.4,
+        64.9
+      ]
+    },
+    "full_all_nas10": {
+      "model": "full",
+      "n_action_steps": 10,
+      "seed": 1000,
+      "suites": {
+        "Spatial": 91.0,
+        "Object": 98.0,
+        "Goal": 91.0,
+        "Long": 79.0
+      },
+      "avg": 89.75,
+      "episodes": 400,
+      "ci95": [
+        86.4,
+        92.4
+      ]
+    },
+    "full_all_nas10_s2000": {
+      "model": "full",
+      "n_action_steps": 10,
+      "seed": 2000,
+      "suites": {
+        "Spatial": 92.0,
+        "Object": 97.0,
+        "Goal": 94.0,
+        "Long": 80.0
+      },
+      "avg": 90.75,
+      "episodes": 400,
+      "ci95": [
+        87.5,
+        93.2
+      ]
+    },
+    "full_all_nas25": {
+      "model": "full",
+      "n_action_steps": 25,
+      "seed": 1000,
+      "suites": {
+        "Spatial": 82.0,
+        "Object": 95.0,
+        "Goal": 90.0,
+        "Long": 78.0
+      },
+      "avg": 86.25,
+      "episodes": 400,
+      "ci95": [
+        82.5,
+        89.3
+      ]
+    },
+    "full_all_nas5": {
+      "model": "full",
+      "n_action_steps": 5,
+      "seed": 1000,
+      "suites": {
+        "Spatial": 91.0,
+        "Object": 100.0,
+        "Goal": 92.0,
+        "Long": 85.0
+      },
+      "avg": 92.0,
+      "episodes": 400,
+      "ci95": [
+        88.9,
+        94.3
+      ]
+    },
+    "full_all_nas50": {
+      "model": "full",
+      "n_action_steps": 50,
+      "seed": 1000,
+      "suites": {
+        "Spatial": 67.0,
+        "Object": 78.0,
+        "Goal": 85.0,
+        "Long": 50.0
+      },
+      "avg": 70.0,
+      "episodes": 400,
+      "ci95": [
+        65.3,
+        74.3
+      ]
+    },
+    "full_all_nas50_s2000": {
+      "model": "full",
+      "n_action_steps": 50,
+      "seed": 2000,
+      "suites": {
+        "Spatial": 70.0,
+        "Object": 83.0,
+        "Goal": 84.0,
+        "Long": 46.0
+      },
+      "avg": 70.75,
+      "episodes": 400,
+      "ci95": [
+        66.1,
+        75.0
+      ]
+    },
+    "published_all_nas10": {
+      "model": "published",
+      "n_action_steps": 10,
+      "seed": 1000,
+      "suites": {
+        "Spatial": 79.0,
+        "Object": 92.0,
+        "Goal": 88.0,
+        "Long": 69.0
+      },
+      "avg": 82.0,
+      "episodes": 400,
+      "ci95": [
+        77.9,
+        85.5
+      ]
+    },
+    "published_all_nas10_s2000": {
+      "model": "published",
+      "n_action_steps": 10,
+      "seed": 2000,
+      "suites": {
+        "Spatial": 79.0,
+        "Object": 88.0,
+        "Goal": 88.0,
+        "Long": 73.0
+      },
+      "avg": 82.0,
+      "episodes": 400,
+      "ci95": [
+        77.9,
+        85.5
+      ]
+    },
+    "published_all_nas25": {
+      "model": "published",
+      "n_action_steps": 25,
+      "seed": 1000,
+      "suites": {
+        "Spatial": 69.0,
+        "Object": 84.0,
+        "Goal": 82.0,
+        "Long": 61.0
+      },
+      "avg": 74.0,
+      "episodes": 400,
+      "ci95": [
+        69.5,
+        78.1
+      ]
+    },
+    "published_all_nas5": {
+      "model": "published",
+      "n_action_steps": 5,
+      "seed": 1000,
+      "suites": {
+        "Spatial": 81.0,
+        "Object": 87.0,
+        "Goal": 82.0,
+        "Long": 66.0
+      },
+      "avg": 79.0,
+      "episodes": 400,
+      "ci95": [
+        74.7,
+        82.7
+      ]
+    },
+    "published_all_nas50": {
+      "model": "published",
+      "n_action_steps": 50,
+      "seed": 1000,
+      "suites": {
+        "Spatial": 64.0,
+        "Object": 68.0,
+        "Goal": 79.0,
+        "Long": 47.0
+      },
+      "avg": 64.5,
+      "episodes": 400,
+      "ci95": [
+        59.7,
+        69.0
+      ]
+    },
+    "published_all_nas50_s2000": {
+      "model": "published",
+      "n_action_steps": 50,
+      "seed": 2000,
+      "suites": {
+        "Spatial": 55.0,
+        "Object": 65.0,
+        "Goal": 71.0,
+        "Long": 51.0
+      },
+      "avg": 60.5,
+      "episodes": 400,
+      "ci95": [
+        55.6,
+        65.2
+      ]
+    }
+  }
+}
